@@ -17,7 +17,7 @@ export default function useCachedResources() {
           ...FontAwesome.font,
           'space-mono': require('../assets/fonts/SpaceMono-Regular.ttf'),
           'poppins-bold': require('../assets/fonts/Poppins-Bold.ttf'),
-          'poppins-regular': require('../assets/fonts/Poppins-Regular.ttf'),
+          'regularpoppins-': require('../assets/fonts/Poppins-Regular.ttf'),
           'poppins-semi-bold': require('../assets/fonts/Poppins-SemiBold.ttf'),
           'poppins-thin': require('../assets/fonts/Poppins-Thin.ttf'),
         });

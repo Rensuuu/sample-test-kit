@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Image, Text, Dimensions } from "react-native";
+import { View, Image, Text, Dimensions, TextInput, StyleSheet, Button } from "react-native";
 import LottieView from 'lottie-react-native';
 
 export default function TabOneScreen() {
@@ -7,79 +7,106 @@ export default function TabOneScreen() {
     <View
       style={{
         flex: 1,
-        backgroundColor: '#273746',
+        backgroundColor: '#AA1AD1',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
       }}
     >
+      
+      
       <View style={{
         height: Dimensions.get('screen').height * 0.5,
         width: '80%',
-        backgroundColor: 'white',
+        backgroundColor: '#D46AF1',
         padding: 10,
-        borderRadius: 10
+        borderRadius: 10,
+        alignItems: 'center',
+        justifyContent: 'center',
       }}>
-        <View
-          style={{
-            flex: 1,
-            marginBottom: 10,
-            borderRadius: 10,
-            overflow: 'hidden'
+        <View>
+          <Text style={{
+            fontSize: 25,
+            fontFamily:"poppins-semi-bold"
+          }}>
+            Log In
+          </Text>
+        </View>
+        <LottieView style={{
+            height:100,
+            width:100
           }}
-        >
-          <LottieView
-            style={{
-              flex: 1,
-            }}
-            source={
-              require('../assets/lottie/44376-3d-gamepad-animation.json')
-            }
-            autoPlay={true}
-            loop={true}
+          source={
+            require('../assets/lottie/96957-lock.json')
+          }
+          autoPlay
           />
-
-        </View>
-        <View
-          style={{
-            flex: 0,
-            backgroundColor: '#E9DBD8',
-            paddingVertical: 10,
-            paddingHorizontal: 10,
-            marginBottom: 10,
-            borderRadius: 10,
-          }}
-        >
-          <Text
-            style={{
-              color: '#877D7B',
-              fontFamily: 'poppins-bold',
-              fontSize: 18,
-            }}
-            numberOfLines={1}
-          >
-            My NFT Card
-          </Text>
-        </View>
-        <View
-          style={{
-            flex: 0,
-            minHeight: 100,
-            maxHeight: 200,
-            backgroundColor: 'white',
-            padding: 5,
-          }}
-        >
-          <Text
-            style={{
-              fontFamily: 'poppins-regular',
-              color: '#877D7B',
-              fontSize: 14
-            }}
-          >
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-          </Text>
-        </View>
+        <View style={styles.un}>
+        <TextInput placeholder='Username' style={{
+          width:'100%',
+        textAlign:'center',
+        color:'white'
+        }}>
+        </TextInput>
       </View>
+
+      <View style={styles.un}>
+        <TextInput placeholder='Password' secureTextEntry style={{
+          width:'100%',
+        textAlign:'center',
+        color:'white'
+        }}>
+        </TextInput>
+      </View>
+
+      <View  style={styles.btn}>
+        <Button onPress = {() => alert('Logged in Successfully!') } title='Log in' color="#75228C">
+        </Button>
+      </View>
+        </View>
     </View>
   );
+
 }
+ const styles = StyleSheet.create({
+  textContainer:{
+    height:'30%',
+    width:'60%',
+    backgroundColor:'white',
+  },
+  un:{
+    height:'10%',
+    fontFamily:'poppins-regular',
+    width:'70%',
+    backgroundColor:'#C854E8',
+    padding: 10,
+    marginTop:10,
+    borderRadius: 20,
+    borderWidth: 1,
+    borderColor:'white'
+  },
+  btn:{
+    marginTop:10,
+  },
+  btnTouch:{
+    marginTop:10,
+    backgroundColor:'white',
+    padding: 10,
+
+  }
+})
+
+
+{/* <View style={styles.un}>
+        <TextInput placeholder='Username'>
+        </TextInput>
+      </View>
+
+      <View style={styles.un}>
+        <TextInput placeholder='Password' secureTextEntry>
+        </TextInput>
+      </View>
+
+      <View  style={styles.btn}>
+        <Button onPress = {() => alert('Logged in Successfully!') } title='Log in' color="#75228C">
+        </Button>
+      </View> */}
