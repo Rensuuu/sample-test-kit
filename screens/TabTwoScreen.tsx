@@ -5,63 +5,63 @@ import Header from '../components/Folder/Header';
 import Login from '../components/Folder/Login';
 
 {// TABTWOSCREEN
-// import { StyleSheet } from 'react-native';
-// import EditScreenInfo from '../components/EditScreenInfo';
-// import { Text, View } from '../components/Themed';
+  // import { StyleSheet } from 'react-native';
+  // import EditScreenInfo from '../components/EditScreenInfo';
+  // import { Text, View } from '../components/Themed';
 }
 
 // LOG-IN
 
 export default function TabOneScreen() {
   return (
-   // HEADER
+    // HEADER
     <View style={styles.container}>
 
-    <View style={styles.head}>
-    <Header />
+      <View style={styles.head}>
+        <Header />
+      </View>
+
+      <View style={styles.log}>
+        <Login />
+      </View>
+
+      <View style={styles.foot}>
+        <Footer />
+      </View>
+
     </View>
 
-    <View style={styles.log}>
-    <Login />
-    </View>
-
-    <View style={styles.foot}>
-    <Footer />
-    </View>
-
-    </View>
 
 
-    
     // TABTWOSCREEN-INSIDE
   );
 }
-    // TABTWOSCREEN-INSIDE
-    // <View style={styles.container}>
-    //   <Text style={styles.title}>Tab Two</Text>
-    //   <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-    //   <EditScreenInfo path="/screens/TabTwoScreen.tsx" />
-    // </View>
+// TABTWOSCREEN-INSIDE
+// <View style={styles.container}>
+//   <Text style={styles.title}>Tab Two</Text>
+//   <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+//   <EditScreenInfo path="/screens/TabTwoScreen.tsx" />
+// </View>
 
 const styles = StyleSheet.create({
   head: {
-   flex: 2,
-    justifyContent:'center',
-    alignItems:'center'
+    flex: 2,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   container: {
     flex: 1,
     backgroundColor: 'wheat'
   },
-  log:{
+  log: {
     flex: 2,
   },
-foot:{
-  flex:1,
-  justifyContent:'flex-end',
-  alignItems:'center',
-  paddingBottom:15,
-},
+  foot: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    paddingBottom: 15,
+  },
 })
 
 // TABTWOSCREEN
